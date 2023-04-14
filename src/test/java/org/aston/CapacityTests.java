@@ -10,7 +10,7 @@ import static org.junit.jupiter.api.Assertions.assertEquals;
 public class CapacityTests {
 
     /**
-     * Проверка на емкость до превышения порога, при котором она должна расшириться.
+     * Check for capacity before exceeding the extending threshold (initial value - 10)
      */
     @Test
     public void testCapacityBeforeExtend() {
@@ -27,7 +27,7 @@ public class CapacityTests {
     }
 
     /**
-     * Проверка на емкость, при отсутствии элементов.
+     * Test for list with no values inside
      */
     @Test
     public void testCapacityZeroElements() {
@@ -40,7 +40,7 @@ public class CapacityTests {
     }
 
     /**
-     * Проверка на емкость, при превышении заданного количества элементов (10). Ожидается расширение до 16.
+     * Check for capacity, when the capacity threshold is exceeded. Expansion to 16 is expected.
      */
     @Test
     public void testCapacityAfterExtend() {
@@ -65,7 +65,7 @@ public class CapacityTests {
         assertEquals(expected, result);
     }
     /**
-     * Проверка на емкость, при превышении заданного количества элементов второй раз (16). Ожидается расширение до 25.
+     *  Check for capacity, when the capacity threshold is exceeded second time. Expansion to 25 is expected.
      */
     @Test
     public void testCapacitySecondExtend() {

@@ -4,11 +4,11 @@ import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 /**
- Тесты для проверки метода size.
+Tests to check the size method
  */
 public class SizeTests {
     /**
-     Добавляем в массив 5 значений, ожидаем размер 5.
+     Adds 5 element, value 5 is expected.
      */
     @Test
     public void testSize() {
@@ -27,7 +27,7 @@ public class SizeTests {
     }
 
     /**
-     * Тест с нулевой длинной списка. Ожидаем получить 0.
+     * Adds 0 element, value 0 is expected.
      */
     @Test
     public void testSizeWithZeroValues() {
@@ -42,7 +42,7 @@ public class SizeTests {
     }
 
     /**
-     * Тест с длинной списка более 10 (13). Ожидаем получить 13.
+     * Adds 13 element, value 13 is expected.
      */
     @Test
     public void testSizeWithMoreThan10Values() {

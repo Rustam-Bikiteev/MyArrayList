@@ -6,12 +6,12 @@ import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.assertArrayEquals;
 
 /**
- * Тесты на проверку метода QuickSort.
+ * Tests to check the QuickSort method
  */
 public class QuickSortTests {
 
     /**
-     * Проверка обычного списка. Ожидается упорядоченный список.
+     * Checking the regular list. An ordered list is expected.
      */
    @Test
     public void testQuickSort(){
@@ -27,7 +27,7 @@ public class QuickSortTests {
     }
 
     /**
-     * Проверка списка с одним элементом. Ожидается список с одним элементом.
+     * Checking the list with 1 element. A list with the 1 element is expected.
      */
     @Test
     public void testQuickSortWithOneValue(){
@@ -42,7 +42,7 @@ public class QuickSortTests {
         assertArrayEquals(expectedList.toArray(expectedArray), result.toArray(actualArray));
     }
     /**
-     * Проверка пустого списка. Ожидается пустой список.
+     * Checking for an empty list. An empty list is expected.
      */
     @Test
     public void testQuickSortWithZeroValue(){
@@ -57,7 +57,7 @@ public class QuickSortTests {
         assertArrayEquals(expectedList.toArray(expectedArray), result.toArray(actualArray));
     }
     /**
-     * Проверка списка со всеми одинаковыми элементами. Ожидается список со всеми одинаковыми элементами.
+     * Checking a list with all the same elements. A list with all the same elements is expected.
      */
     @Test
     public void testQuickSortWithAllSameValues(){
@@ -73,8 +73,8 @@ public class QuickSortTests {
     }
 
     /**
-     * Проверка списка со строками. Так как метод comareTo является чувствительным к регистру, то вначале сортируются Заглавные буквы, затем строчные.
-     * Ожидается вывод строк в алфавитном порядке.
+     * Check list with Strings. Since the comareTo method is case-sensitive, it sorts Uppercase letters first, then lowercase letters.
+     * Expect strings to be output in alphabetical order.
      */
     @Test
     public void testQuickSortWithStringValue(){
@@ -90,7 +90,7 @@ public class QuickSortTests {
     }
 
     /**
-     * Проверка списка с символами. Ожидается вывод символов в алфавитном порядке.
+     * Checking a list with Chars. Characters are expected to be output in alphabetical order.
      */
     @Test
     public void testQuickSortWithCharValue(){

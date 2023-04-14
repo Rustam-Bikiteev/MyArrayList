@@ -6,11 +6,11 @@ import static org.junit.jupiter.api.Assertions.assertArrayEquals;
 import static org.junit.jupiter.api.Assertions.assertThrows;
 
 /**
- * Тесты на проверку метода delete.
+ * Test to check delete method
  */
 public class DeleteTests {
     /**
-     * Проверка на удаление элемента из середины списка
+     * Checking if an element is removed from the middle of a list
      */
     @Test
     public void testDeleteMiddle() {
@@ -30,7 +30,7 @@ public class DeleteTests {
         assertArrayEquals(expectedList.toArray(expectedArray), actualList.toArray(actualArray));
     }
     /**
-     * Проверка на удаление элемента из начала списка
+     * Checking if an element is removed from the beginning of a list
      */
     @Test
     public void testDeleteBegin() {
@@ -51,7 +51,7 @@ public class DeleteTests {
     }
 
     /**
-     * Проверка на удаление элемента из конца списка
+     * Checking if an element is removed from the end of a list
      */
     @Test
     public void testDeleteEnd() {
@@ -72,7 +72,7 @@ public class DeleteTests {
     }
 
     /**
-     * Тест на удаление элемента за пределами индекса. Ожидается получить IndexOutOfBoundsException exception.
+     * Test for deleting an element to index, out of size bounds. Expected to receive an IndexOutOfBoundsException exception.
      */
     @Test
     public void testDeleteOutOfBounds() {

@@ -2,46 +2,47 @@ package org.aston;
 
 
 /**
- * Интерфейс List.
+ * Interface List.
+ * Provides standard methods to operate with the data inside the List.
  */
 public interface MyList<T> {
     /**
-     * метод для добавления значение t в массив.
+     * adds the new element t to the list.
      */
     void add(T t);
 
     /**
-     * метод для добавления значения t в массив по индексу index.
+     * adds the new element t to the list by its index.
      */
     void add(int index, T t);
 
     /**
-     * метод для установки значения в массив по индексу. Значение перезаписывается.
+     * set the new value over the old value by the index.
      */
     void set(int index, T t);
 
     /**
-     * метод для удаления значения по индексу index.
+     * delete value from the list by index.
      */
     T delete(int index);
 
     /**
-     * метод для получения значения по индексу index.
+     * returns value from the list by the index.
      */
     T get(int index);
 
     /**
-     * метод для получения размера массива.
+     * returns the size of the list
      */
     int size();
 
     /**
-     * метод для получение емкости массива.
+     * returns the capacity of the list
      */
     int capacity();
 
     /**
-     * метод для преобразования списка в массив.
+     * transform the list to an array with the same values inside.
      */
     T[] toArray(T[] t);
 

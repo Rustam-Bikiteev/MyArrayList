@@ -6,13 +6,13 @@ import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertThrows;
 
 /**
- * Тесты на проверку метода get.
+ * Test to check the get method
  */
 public class GetTests {
     @Test
 
     /**
-     * Тест на получение значения из середины списка.
+     * Test to get a value from the middle of the list.
      */
     public void testGetMiddle() {
         //Given
@@ -28,7 +28,7 @@ public class GetTests {
         assertEquals(expected, actualList.get(2));
     }
     /**
-     * Тест на получение значения из начала списка.
+     * Test to get a value from the beginning of the list.
      */
     @Test
     public void testGetBegin() {
@@ -46,7 +46,7 @@ public class GetTests {
     }
 
     /**
-     * Тест на получение значения из конца списка.
+     * Test to get a value from the end of the list.
      */
     @Test
     public void testGetEnd() {
@@ -63,7 +63,7 @@ public class GetTests {
         assertEquals(expected, actualList.get(4));
     }
     /**
-     * Тест на получение элемента за пределами индекса. Ожидается получить IndexOutOfBoundsException exception.
+     * Test for getting an element to index, out of size bounds. Expected to receive an IndexOutOfBoundsException exception.
      */
     @Test
     public void testGetOutOfBound() {

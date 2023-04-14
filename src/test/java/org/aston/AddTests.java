@@ -5,12 +5,12 @@ import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.*;
 
 /**
- * Тесты на проверу метода add.
+ * Tests to check the add method.
  */
 public class AddTests {
 
     /**
-     * обычный тест с добавлением 4 элементов в массив.
+     * the usual test with adding 4 elements to the array.
      */
     @Test
     public void testAdd() {
@@ -29,7 +29,7 @@ public class AddTests {
     }
 
     /**
-     * Тест на расширение емкости массива, добавляется больше, чем 10 элементов (изначальная емкость) ожидается расширение по формуле до 16.
+     * Array capacity expansion test, more than 10 elements are added (initial capacity) expected to expand capacity to 16.
      */
     @Test
     public void testAddMoreThanInitCapacity() {
@@ -55,7 +55,7 @@ public class AddTests {
     }
 
     /**
-     * Тест на добавление элемента в начало списка.
+     * Test for adding an element to the beginning of the list.
      */
     @Test
     public void testAddIndexAtZero() {
@@ -75,7 +75,7 @@ public class AddTests {
     }
 
     /**
-     * Тест на добавление элемента в середину списка.
+     * Test for adding an element to the middle of the list.
      */
     @Test
     public void testAddIndexAtMiddle() {
@@ -94,7 +94,7 @@ public class AddTests {
         assertArrayEquals(expectedList.toArray(expectedArray), actualList.toArray(actualArray));
     }
     /**
-     * Тест на добавление элемента в конец списка.
+     * Test for adding an element to the end of the list.
      */
     @Test
     public void testAddIndexAtEnd() {
@@ -113,7 +113,7 @@ public class AddTests {
         assertArrayEquals(expectedList.toArray(expectedArray), actualList.toArray(actualArray));
     }
     /**
-     * Тест на добавление элемента за пределы индекса. Ожидается получить IndexOutOfBoundsException exception.
+     * Test for adding an element to index, out of size bounds. Expected to receive an IndexOutOfBoundsException exception.
      */
     @Test
     public void testAddIndexOutOfBounds() {

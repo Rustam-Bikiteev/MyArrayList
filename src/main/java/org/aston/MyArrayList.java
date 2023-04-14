@@ -4,12 +4,8 @@ package org.aston;
 import java.util.Arrays;
 
 /**
- * Реализует методы интерфейса List:
- * get(int index) - возвращает элемент массива по индексу.
- * set(int index, T t) - заменяет элемент с индексом index в массиве.
- * delete(int index) - удаляет элемент из массива по индексу.
- * int size() - возвращает текущий размер массива (количество элементов).
- * int capacity() - возвращает текущую емкость массива.
+ * Implements MyList interface methods:
+ * Indexed List of data, can store and operate with data.
  */
 public class MyArrayList<T> implements MyList<T> {
     private T[] elementData;
@@ -29,9 +25,9 @@ public class MyArrayList<T> implements MyList<T> {
     }
 
     /**
-     * добавляет элемент в массив. Если длина достигнет значения емкости, емкость автоматически расширится.
+     * Adds element to List. If the Length is more than initial capacity, then extended.
      *
-     * @param t значение элемента, добавляется в конец массива.
+     * @param t Element value, added to the end of the List
      */
     @Override
     public void add(T t) {
@@ -42,10 +38,9 @@ public class MyArrayList<T> implements MyList<T> {
     }
 
     /**
-     * добавляет элемент в массив по номеру индекса.
-     *
-     * @param index индекс, на место которого будет вставлено значение t со сдвигом вправо.
-     * @param t     значениеЮ которое будет вставлено в массив.
+     * Adds element to the List by the index.
+     * @param index index, shows the place where will be put the value with the right shift.
+     * @param t value to be put int hte List to index.
      */
     @Override
     public void add(int index, T t) {
@@ -61,8 +56,8 @@ public class MyArrayList<T> implements MyList<T> {
     }
 
     /**
-     * @param index указывается индекс, по которому будет возвращено значение.
-     * @return возвращает значение, находящееся по индексу index.
+     * @param index shows the index, from where the value should be taken.
+     * @return returns the value, located by the index.
      */
     @Override
     public T get(int index) {
@@ -74,10 +69,9 @@ public class MyArrayList<T> implements MyList<T> {
 
 
     /**
-     * устанавливает заданное значение на место заданного индекса. Значение перезаписывается.
-     *
-     * @param index индекс, на место которого будет записано новое значение
-     * @param t     новое значение, которое будет записано на индекс index.
+     * Overwrite the value by the index.
+     * @param index index, where the new value will be placed.
+     * @param t  new value, which will be overwritten at specified index
      */
     @Override
     public void set(int index, T t) {
@@ -88,10 +82,9 @@ public class MyArrayList<T> implements MyList<T> {
     }
 
     /**
-     * удаляет значенее по указанному индексу. Массив сдвигается влево. Последнее значение массива остается Null.
-     *
-     * @param index Индекс, по которому будет удалено значение.
-     * @return возвращает удаленное значение.
+     * Deletes the value by the index. The list sifts to the left. The last right value becomes null;
+     * @param index index, from where the value will be deleted.
+     * @return returns the deleted value.
      */
     @Override
     public T delete(int index) {
@@ -106,7 +99,7 @@ public class MyArrayList<T> implements MyList<T> {
     }
 
     /**
-     * @return возвращает размер массива.
+     * @return returns the size of the list
      */
     @Override
     public int size() {
@@ -114,7 +107,7 @@ public class MyArrayList<T> implements MyList<T> {
     }
 
     /**
-     * @return возвращает емкость массива.
+     * @return returns the capacity of the list
      */
     @Override
     public int capacity() {
@@ -122,10 +115,10 @@ public class MyArrayList<T> implements MyList<T> {
     }
 
     /**
-     * Преобразует лист со значениями в массив с такими же значениями.
+     * Trasforms list to the array with the same values inside.
      *
-     * @param t массив, в который будут записаны данные из листа.
-     * @return - возвращает массив с таким же набором элементов как и в исходном листе.
+     * @param t Array, to which new values will be placed from the list.
+     * @return - returns the array with the same values as in the given list.
      */
     @Override
     public T[] toArray(T[] t) {
@@ -138,7 +131,7 @@ public class MyArrayList<T> implements MyList<T> {
     }
 
     /**
-     * метод расширяет емкость массива при переполнении массива, при добавлении новых значений.
+     * Extends the capacity, when size become equal to the capacity. Uses formula: (capacity * 3) / 2 + 1.
      */
     private void extendCapacity() {
         int newCapacity = (capacity * 3) / 2 + 1;

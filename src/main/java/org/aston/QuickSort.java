@@ -2,19 +2,17 @@ package org.aston;
 
 
 /**
- * Класс, реализующий быструю сортировку массива.
+ * Allows to sort given list in ascending or alphabetical order.
  */
 public class QuickSort {
 
     /**
-     * Метод partition() возвращает индекс разделенного массива.
-     * Рекурсивно, подмассивы справа и слева от индекса (pivotIndex) делятся на подмассивы,
-     * пока не останется 1 элемент в каждом подмассиве.
-     *
-     * @param arrayList исходный массив для сортировки.
-     * @param begin     начальный индекс массива.
-     * @param end       конечный индекс массива.
-     * @return возвращает отсортированный массив.
+     * Метод partition() returns index of separated array.
+     * Using recursion, elements on the right and elements on the left divided to subarrays, until each subarray contains only 1 element
+     * @param arrayList Initial array for sorting
+     * @param begin     initial array index (first element).
+     * @param end       last array index (last element)
+     * @return returns sorted subarray (array).
      */
     public static <T extends Comparable<T>> MyArrayList<T> quickSort(MyArrayList<T> arrayList, int begin, int end) {
 
@@ -27,16 +25,10 @@ public class QuickSort {
     }
 
     /**
-     * В качестве Pivot берется последний элемент массива.
-     * Далее в цикле, начиная с начальнойго элемента begin (не обязательно 0) сравнивается сравнивается Pivot,
-     * идет по порядку, как только находится элемент меньше Pivot, он меняется с начальным элементом,
-     * начальный эелемент инкрементируется. В конце концов, Pivot вставляется между элементами, группами элементов,
-     * которые больше и именьше него, соответственно меньшие элементы оказываются справа, большие - слева.
-     *
      * @param arrayList Массив для сортировки.
      * @param begin     начальный индекс массива.
      * @param end       конечный индекс массива.
-     * @return возвращает
+     * @return returns pivotIndex for further separation of array.
      */
     private static <T extends Comparable<T>> int partition(MyArrayList<T> arrayList, int begin, int end) {
         T pivot = arrayList.get(end);

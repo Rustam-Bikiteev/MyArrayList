@@ -6,12 +6,12 @@ import static org.junit.jupiter.api.Assertions.assertArrayEquals;
 import static org.junit.jupiter.api.Assertions.assertThrows;
 
 /**
- * Тесты на проверку метода Set
+ * Tests for checking the set method
  */
 public class SetTests {
 
     /**
-     * Тест на заменту элемента в середине списка.
+     * Test to replace the element at the middle of the list.
      */
     @Test
     public void testSetAtMid() {
@@ -32,7 +32,7 @@ public class SetTests {
     }
 
     /**
-     * Тест на заменту элемента в начале списка.
+     * Test to replace the element at the beginning of the list.
      */
     @Test
     public void testSetAtBegin() {
@@ -53,7 +53,7 @@ public class SetTests {
     }
 
     /**
-     * Тест на замену элемента в конце списка.
+     * Test to replace the element at the end of the list.
      */
     @Test
     public void testSetAtEnd() {
@@ -74,7 +74,7 @@ public class SetTests {
     }
 
     /**
-     * Тест на замену элемента за пределами индекса. Ожидается получить IndexOutOfBoundsException exception.
+     * Test for setting an element to index, out of size bounds. Expected to receive an IndexOutOfBoundsException exception.
      */
     @Test
     public void testSetOutOfBounds() {
