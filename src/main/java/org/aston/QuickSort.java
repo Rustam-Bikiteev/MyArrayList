@@ -25,9 +25,9 @@ public class QuickSort {
     }
 
     /**
-     * @param arrayList Массив для сортировки.
-     * @param begin     начальный индекс массива.
-     * @param end       конечный индекс массива.
+     * @param arrayList List for sorting.
+     * @param begin     initial index.
+     * @param end       end index.
      * @return returns pivotIndex for further separation of array.
      */
     private static <T extends Comparable<T>> int partition(MyArrayList<T> arrayList, int begin, int end) {
